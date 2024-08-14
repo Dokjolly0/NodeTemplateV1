@@ -11,7 +11,7 @@ dotenv.config({ path: envFile });
 //database config -> local for db local, atlas for db atlas
 let database = 'local'
 let connection_string;
-if (database === 'local') connection_string = `${process.env.CONNECTION_STRING_LOCAL}/todo-list`
+if (database === 'local') connection_string = `${process.env.CONNECTION_STRING_LOCAL}/todo-list` // /database-name
 else if (database === 'atlas') connection_string = process.env.CONNECTION_STRING;
 
 mongoose.set("debug", true);
